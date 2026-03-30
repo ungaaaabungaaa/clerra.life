@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 
+const quicksand = Quicksand({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-quicksand",
+});
+
 export const metadata: Metadata = {
-  title: "Clerra | Less, but true",
+  title: "Clerra.Life",
   description: "Less, but true",
   manifest: "/site.webmanifest",
   icons: {
@@ -34,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={quicksand.variable}>
       <body>{children}</body>
     </html>
   );
