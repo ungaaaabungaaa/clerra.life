@@ -12,7 +12,7 @@ html,
 body {
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -21,33 +21,16 @@ body {
   background: var(--page-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family:
+    "Avenir Next",
+    "Nunito Sans",
+    "Segoe UI",
+    sans-serif;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-.landing-shell {
-  width: 100vw;
-  min-height: 100dvh;
-  overflow: hidden;
-  background: var(--page-background);
-}
-
-.landing-link {
-  display: block;
-  width: 100%;
-  min-height: 100dvh;
-  background-image: url("/background.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.landing-link:focus-visible {
-  outline: 3px solid #ffffff;
-  outline-offset: 4px;
 }
 
 .sr-only {
