@@ -1,19 +1,58 @@
 const CHROME_WEB_STORE_URL = "https://chromewebstore.google.com";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      name: "Clerra",
+      url: "https://clerra.life",
+      description:
+        "Clerra is a browser extension that declutters pages, reduces noise, and helps you focus on the content that matters.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Clerra",
+      applicationCategory: "BrowserApplication",
+      operatingSystem: "Google Chrome",
+      description:
+        "A browser extension that declutters pages and helps you focus on the content worth your attention.",
+      url: "https://clerra.life",
+      downloadUrl: CHROME_WEB_STORE_URL,
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+      },
+    },
+  ],
+};
 
 export default function Home() {
   return (
     <main className="flex min-h-dvh items-center justify-center px-4 py-8 text-[#050505] sm:px-6 sm:py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <section
         className="mx-auto flex w-full max-w-[1200px] flex-col items-center justify-center gap-10 px-2 sm:gap-12 sm:px-6 md:px-10"
         aria-label="Clerra"
       >
         <header className="flex w-fit max-w-full flex-col items-center py-4 sm:py-6">
           <h1 className="text-center text-[clamp(3.8rem,9vw,5.9rem)] font-semibold leading-[0.92] tracking-[-0.075em] drop-shadow-[0_10px_18px_rgba(0,0,0,0.06)]">
-            Clerra.Life
+            Clerra
           </h1>
 
-          <p className="mt-4 w-fit self-end pr-[0.2em] text-left text-[clamp(1.35rem,3.1vw,2.1rem)] font-medium leading-none tracking-[-0.05em]">
-            Less, but true
+          <p className="mt-4 text-center text-[clamp(1.35rem,3.1vw,2.1rem)] font-medium leading-none tracking-[-0.05em]">
+            Declutter the web. Keep your focus.
+          </p>
+
+          <p className="mt-5 max-w-2xl text-center text-base leading-7 text-black/72 sm:text-lg">
+            Clerra is a browser extension for people tired of noisy pages,
+            scattered signals, and attention traps. It cuts the clutter so you
+            can get to the few things worth reading.
           </p>
         </header>
 
@@ -26,7 +65,7 @@ export default function Home() {
           rel="noopener noreferrer"
           style={{ color: "#fff" }}
         >
-          Install Plugin
+          Add to Chrome
         </a>
       </section>
     </main>

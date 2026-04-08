@@ -1,1 +1,21 @@
-{"name":"","short_name":"","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+  "name": "Clerra",
+  "short_name": "Clerra",
+  "description": "Clerra is a browser extension that declutters pages and helps you focus on what matters.",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#f5ede0",
+  "background_color": "#f5ede0",
+  "display": "standalone"
+}

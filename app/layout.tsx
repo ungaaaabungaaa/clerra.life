@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import "./globals.css";
 
+const siteUrl = new URL("https://clerra.life");
+const siteTitle = "Clerra | Browser Extension for a Cleaner, More Focused Web";
+const siteDescription =
+  "Clerra is a browser extension that declutters pages, reduces noise, and helps you focus on the content that actually matters.";
+
 const quicksand = Quicksand({
   subsets: ["latin"],
   display: "swap",
@@ -9,9 +14,44 @@ const quicksand = Quicksand({
 });
 
 export const metadata: Metadata = {
-  title: "Clerra.Life",
-  description: "Less, but true",
+  metadataBase: siteUrl,
+  title: siteTitle,
+  description: siteDescription,
+  applicationName: "Clerra",
+  keywords: [
+    "Clerra",
+    "browser extension",
+    "Chrome extension",
+    "declutter web pages",
+    "focus online",
+    "reduce distractions",
+  ],
+  alternates: {
+    canonical: "/",
+  },
   manifest: "/site.webmanifest",
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: siteTitle,
+    description: siteDescription,
+    siteName: "Clerra",
+    locale: "en_US",
+    images: [
+      {
+        url: "/background.png",
+        width: 6912,
+        height: 4468,
+        alt: "Clerra browser extension preview background",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/background.png"],
+  },
   icons: {
     apple: [
       {
@@ -32,6 +72,7 @@ export const metadata: Metadata = {
         type: "image/png",
       },
     ],
+    shortcut: ["/favicon.ico"],
   },
 };
 
