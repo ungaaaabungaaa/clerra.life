@@ -59,7 +59,7 @@ export default function Home() {
           rel="noopener noreferrer"
           style={{ color: "#fff" }}
         >
-          Add to Chrome
+          Install Plugin
         </a>
       </section>
     </main>
