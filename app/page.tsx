@@ -4,7 +4,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "WebSite",
-      name: "Clerra",
+      name: "Clerra.Life",
       url: "https://clerra.life",
       description:
         "Clerra is a browser extension that declutters pages, reduces noise, and helps you focus on the content that matters.",
@@ -42,7 +42,7 @@ export default function Home() {
       >
         <header className="flex w-fit max-w-full flex-col items-center py-4 sm:py-6">
           <h1 className="text-center text-[clamp(3.8rem,9vw,5.9rem)] font-semibold leading-[0.92] tracking-[-0.075em] drop-shadow-[0_10px_18px_rgba(0,0,0,0.06)]">
-            Clerra
+            Clerra.Life
           </h1>
 
           <p className="mt-4 text-center text-[clamp(1.35rem,3.1vw,2.1rem)] font-medium leading-none tracking-[-0.05em]">
