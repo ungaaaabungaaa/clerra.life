@@ -46,13 +46,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-4 text-center text-[clamp(1.35rem,3.1vw,2.1rem)] font-medium leading-none tracking-[-0.05em]">
-            Declutter the web. Keep your focus.
-          </p>
-
-          <p className="mt-5 max-w-2xl text-center text-base leading-7 text-black/72 sm:text-lg">
-            Clerra is a browser extension for people tired of noisy pages,
-            scattered signals, and attention traps. It cuts the clutter so you
-            can get to the few things worth reading.
+            Less, but true.
           </p>
         </header>
 
